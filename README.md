@@ -14,15 +14,12 @@ In this project there are some 3rd parties in use:
 
 * [Alamofire](https://github.com/Alamofire/Alamofire) - networking
 * [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) - easy json parsing
-* [Swinject](https://github.com/Swinject/Swinject) - dependency injection
 
 ## CocoaPods
 
-We use CocoaPods so dont forget to `pod install` after cloning the repo.
+We use CocoaPods so don't forget to `pod install` after cloning the repo.
 
 ## Usage
-
-See `AppDelegate.swift` file for how to use Swinject if you're not familiar with it.
 
 See `ViewController.swift` file to see how to use `CompanyService` for getting the data to present.
 
