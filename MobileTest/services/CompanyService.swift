@@ -2,9 +2,13 @@ import Foundation
 
 class CompanyService {
 
-    // injected on AppDelegate
-    var api: CompanyAPIType?
+    static let main: CompanyService = {
+        let service = CompanyService()
+        service.load()
+        return service
+    }()
 
+    private let companyDataAPI = CompanyAPI()
     private var company: Company!
 
     private var queryQueue: OperationQueue = {
@@ -16,7 +20,7 @@ class CompanyService {
 
     func load() {
         queryQueue.isSuspended = true
-        api?.fetch { [weak self] in
+        companyDataAPI.fetch { [weak self] in
             self?.company = $0
 
             // start all queries

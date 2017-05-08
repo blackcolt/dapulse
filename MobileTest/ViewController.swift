@@ -2,21 +2,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // injected on AppDelegate
-    var companyService: CompanyService?
+    let companyService = CompanyService.main
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        companyService?.getCompanyName({ (name) in
+        companyService.getCompanyName({ (name) in
             print(name)
         })
 
-        companyService?.getTopLevelEmployees(completion: { (employees) in
+        companyService.getTopLevelEmployees(completion: { (employees) in
             print(employees)
         })
 
-        companyService?.getEmployees(forManagerId: 22, completion: { (employees) in
+        companyService.getEmployees(forManagerId: 22, completion: { (employees) in
             print(employees)
         })
     }
