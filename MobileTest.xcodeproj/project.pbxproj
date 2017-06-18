@@ -16,6 +16,9 @@
 		B04879A41E99161A00346778 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04879A31E99161A00346778 /* Company.swift */; };
 		B04879A61E99162200346778 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04879A51E99162200346778 /* Employee.swift */; };
 		DE10AF3ACF46DF6B2FB53BC0 /* Pods_MobileTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6010086C3FFAA751F267E517 /* Pods_MobileTest.framework */; };
+		EE3C6EB31EF1110400D6EE77 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3C6EB21EF1110400D6EE77 /* Storyboard.storyboard */; };
+		EE84D9C41EF2AFB700C23AD8 /* emploeesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84D9C31EF2AFB700C23AD8 /* emploeesCollectionViewCell.swift */; };
+		EEAA32AA1EF2BC110034320F /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAA32A91EF2BC110034320F /* detailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		B04879A01E9915E000346778 /* CompanyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyAPI.swift; sourceTree = "<group>"; };
 		B04879A31E99161A00346778 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		B04879A51E99162200346778 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		EE3C6EB21EF1110400D6EE77 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		EE84D9C31EF2AFB700C23AD8 /* emploeesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = emploeesCollectionViewCell.swift; sourceTree = "<group>"; };
+		EEAA32A91EF2BC110034320F /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = detailViewController.swift; path = ../detailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,13 +90,16 @@
 		B04879891E99110A00346778 /* MobileTest */ = {
 			isa = PBXGroup;
 			children = (
+				EE84D9C51EF2AFD900C23AD8 /* customCells */,
 				B04879A21E99160500346778 /* models */,
 				B048799C1E99128400346778 /* services */,
 				B048798A1E99110A00346778 /* AppDelegate.swift */,
+				EEAA32A91EF2BC110034320F /* detailViewController.swift */,
 				B048798C1E99110A00346778 /* ViewController.swift */,
 				B04879911E99110A00346778 /* Assets.xcassets */,
 				B04879931E99110A00346778 /* LaunchScreen.storyboard */,
 				B04879961E99110A00346778 /* Info.plist */,
+				EE3C6EB21EF1110400D6EE77 /* Storyboard.storyboard */,
 			);
 			path = MobileTest;
 			sourceTree = "<group>";
@@ -111,6 +120,14 @@
 				B04879A51E99162200346778 /* Employee.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		EE84D9C51EF2AFD900C23AD8 /* customCells */ = {
+			isa = PBXGroup;
+			children = (
+				EE84D9C31EF2AFB700C23AD8 /* emploeesCollectionViewCell.swift */,
+			);
+			name = customCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +165,8 @@
 				TargetAttributes = {
 					B04879861E99110A00346778 = {
 						CreatedOnToolsVersion = 8.3.1;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = WK3MG9PTZP;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -177,6 +195,7 @@
 			files = (
 				B04879951E99110A00346778 /* LaunchScreen.storyboard in Resources */,
 				B04879921E99110A00346778 /* Assets.xcassets in Resources */,
+				EE3C6EB31EF1110400D6EE77 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,12 +254,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE84D9C41EF2AFB700C23AD8 /* emploeesCollectionViewCell.swift in Sources */,
 				B04879A11E9915E000346778 /* CompanyAPI.swift in Sources */,
 				B04879A61E99162200346778 /* Employee.swift in Sources */,
 				B048798D1E99110A00346778 /* ViewController.swift in Sources */,
 				B048799F1E9912ED00346778 /* CompanyService.swift in Sources */,
 				B04879A41E99161A00346778 /* Company.swift in Sources */,
 				B048798B1E99110A00346778 /* AppDelegate.swift in Sources */,
+				EEAA32AA1EF2BC110034320F /* detailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,11 +377,13 @@
 			baseConfigurationReference = 7A33E8D9F496D760323F8AA0 /* Pods-MobileTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WK3MG9PTZP;
 				INFOPLIST_FILE = MobileTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dapulse.MobileTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
@@ -371,11 +394,13 @@
 			baseConfigurationReference = 4EB1853B3F03B2E8D64E90A8 /* Pods-MobileTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WK3MG9PTZP;
 				INFOPLIST_FILE = MobileTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dapulse.MobileTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
